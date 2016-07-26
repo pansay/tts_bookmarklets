@@ -2,6 +2,6 @@
 Bookmarklets for tts (text-to-speech).
 
 
-Just copy the js source into a bookmarklet maker and enjoy!
+Just copy the js source into a [bookmarklet maker](http://mrcoles.com/bookmarklet/) and enjoy!
 
-http://mrcoles.com/bookmarklet/
+
