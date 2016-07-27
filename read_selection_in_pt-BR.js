@@ -6,6 +6,7 @@
     function speak(text, voice) {
         var utterance = new SpeechSynthesisUtterance(text);
         utterance.voice = voice;
+        utterance.lang = lang;
         utterance.rate = .4;
         synth.speak(utterance);
     }
