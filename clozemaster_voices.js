@@ -1,4 +1,3 @@
-// adds buttons for selectable tts voices for clozemaster.com
 (function($, synth, langGroup) {
 
     function getVoices(langGroup) {
