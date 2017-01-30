@@ -3,7 +3,7 @@ var box = document.forms.editform.elements.wpTextbox1,
         ["([^'])'([^'])", '$1’$2'],             // apostrophe for single '
         [' {2,}', ' '],                         // remove non-single spaces
         ['"(.*?)"', '«$1»'],                    // French quotes from regular double quotes
-        ['« (.*?) »', '«$1»'],                 // French quotes remove breaking spaces
+        ['« (.*?) »', '«$1»'],                  // French quotes remove breaking spaces
         ['«&nbsp;(.*?)&nbsp;»', '«$1»'],        // TODO improve this with better regexp below
         ['«(.*?)»', '«&nbsp;$1&nbsp;»'],        // French quotes add non-breaking spaces
         ['--', '-'],                            // French emdash
@@ -13,6 +13,6 @@ var box = document.forms.editform.elements.wpTextbox1,
     replace;
 
 
-while ( replace = replaces.pop() ) {
+while ( replace = replaces.shift() ) {
     box.value=box.value.replace(new RegExp(replace[0],'ig'),replace[1]);
 }
