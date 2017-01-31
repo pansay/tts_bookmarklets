@@ -6,4 +6,5 @@ var box = document.forms.editform.elements.wpTextbox1,
     txtBefore = box.value.substring(0, start),
     txtAfter = box.value.substring(end, len);
 
-box.value = txtBefore + '“' + selectedText + '”' + txtAfter;
+selectedText = selectedText.replace(new RegExp('"(.*?)"', 'ig'), '“$1”');
+box.value = txtBefore + selectedText + txtAfter;
